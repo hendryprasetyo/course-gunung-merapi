@@ -12,6 +12,32 @@ body {
   min-height: 100vh;
 }
 
+nav{
+  width: 100%;
+  background-color: skyblue;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .logo {
+
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+}
+
+nav ul li a {
+  color: #f7f7f7;
+  text-decoration: none;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
 .welcome {
   font-size: 28px;
   font-weight: 800;
