@@ -1,122 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <!------------------ NAVBAR START ------------------>
-      <nav>
-        <div class="logo">
-          <h3>GiantShoes</h3>
-        </div>
-        <ul>
-          <li><a href="">home</a></li>
-          <li><a href="">product</a></li>
-          <li><a href="">galery</a></li>
-          <li><a href="">about</a></li>
-        </ul>
-      </nav>
-      <!------------------ NAVBAR END ------------------>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <div class="welcome">😈 WELCOME GHOST SHOES 😈</div>
-      <div class="cta">
-        <model-viewer src="assets/scene.gltf" camera-controls
-          camera-orbit="45deg 50deg" disable-zoom auto-rotate
-          shadow-intensity="1"></model-viewer>
+  <!-- BOXICONS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <!------------------ NAVBAR START ------------------>
+    <nav>
+      <div class="logo" onclick="back()">
+        <h3>GiantShoes</h3>
       </div>
-
-      <div class="newBox" id="newBox">
-        <div class="productBox" id="productBox1">
-          <img src="assets/nike1.png" alt=""/>
-          <div class="titleBox">TESTING BOX 1</div>
-          <div class="descriptionBox">DESKRIPSI BOX 1</div>
-        </div>
-        <div class="productBox" id="productBox2">
-          <img src="assets/nike2.png" alt=""/>
-          <div class="titleBox">TESTING BOX 2</div>
-          <div class="descriptionBox">DESKRIPSI BOX 2</div>
-        </div>
+      <ul>
+        <li><a href="" onclick="back()">home</a></li>
+        <li><a href="">product</a></li>
+        <li><a href="">galery</a></li>
+        <li><a href="">about</a></li>
+      </ul>
+      <div class="toggle-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </nav>
+    <!------------------ NAVBAR END ------------------>
 
-      <div class="wrapper" id="wrapper">
-        <div class="card">
-          <div class="product" id="product1" onclick="getDetail(1)">
-            <img src="assets/nike1.png" alt=""/>
-          </div>
-          <div class="detail">
-            <div class="title">Nike Sport One</div>
-            <div class="description">Best Shoes Ever</div>
-          </div>
+    <div class="cta" id="cta">
+      <model-viewer src="assets/scene.gltf" camera-controls camera-orbit="45deg 50deg" disable-zoom auto-rotate
+        shadow-intensity="1"></model-viewer>
+    </div>
+
+    <div class="newBox" id="newBox">
+      <div class="productBox" id="productBox1">
+        <div class="img-product">
+          <i class='bx bx-left-arrow-alt' onclick="back()"></i>
+          <img src="assets/nike1.png" alt="" />
         </div>
-        <div class="card">
-          <div class="product" id="product2" onclick="getDetail(2)">
-            <img src="assets/nike2.png" alt=""/>
-          </div>
-          <div class="detail">
-            <div class="title">Nike Vulgar Two</div>
-            <div class="description">Comfort is in you</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="product" id="product3" onclick="getDetail(3)">
-            <img src="assets/nike3.png" alt=""/>
-          </div>
-          <div class="detail">
-            <div class="title">Nike GoodToGo</div>
-            <div class="description">Running Faster</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="product" id="product4" onclick="getDetail(4)">
-            <img src="assets/nike4.png" alt=""/>
-          </div>
-          <div class="detail">
-            <div class="title">Nike Suede Sport</div>
-            <div class="description">Better then anything</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="product" id="product5" onclick="getDetail(5)">
-            <img src="assets/nike5.png" alt=""/>
-          </div>
-          <div class="detail">
-            <div class="title">Nike Goals</div>
-            <div class="description">Shoot Anyone</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="product" id="product6" onclick="getDetail(6)">
-            <img src="assets/nike6.png" alt=""/>
-          </div>
-          <div class="detail">
-            <div class="title">Nike Fredom</div>
-            <div class="description">Free to run</div>
-          </div>
-        </div>
+        <div class="titleBox">TESTING BOX 1</div>
+        <div class="descriptionBox">DESKRIPSI BOX 1</div>
+      </div>
+      <div class="productBox" id="productBox2">
+        <img src="assets/nike2.png" alt="" />
+        <div class="titleBox">TESTING BOX 2</div>
+        <div class="descriptionBox">DESKRIPSI BOX 2</div>
       </div>
     </div>
 
-    <div class="top-item">
-      <div class="top-item-wrapper">
-        <div class="top-item-row">
-          <img src="assets/nike5.png" alt="">
-          <div class="top-item-detail">
-            <h3>Nike Sport One</h3>
-            <p>Best Shoes Ever that was used by Cristiano Ronaldo and Lionel
-              Messi</p>
-          </div>
+    <div class="wrapper" id="wrapper">
+      <div class="card">
+        <div class="product" id="product1" onclick="getDetail(1)">
+          <img src="assets/nike1.png" alt="" />
+        </div>
+        <div class="detail">
+          <div class="title">Nike Sport One</div>
+          <div class="description">Best Shoes Ever</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product" id="product2" onclick="getDetail(2)">
+          <img src="assets/nike2.png" alt="" />
+        </div>
+        <div class="detail">
+          <div class="title">Nike Vulgar Two</div>
+          <div class="description">Comfort is in you</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product" id="product3" onclick="getDetail(3)">
+          <img src="assets/nike3.png" alt="" />
+        </div>
+        <div class="detail">
+          <div class="title">Nike GoodToGo</div>
+          <div class="description">Running Faster</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product" id="product4" onclick="getDetail(4)">
+          <img src="assets/nike4.png" alt="" />
+        </div>
+        <div class="detail">
+          <div class="title">Nike Suede Sport</div>
+          <div class="description">Better then anything</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product" id="product5" onclick="getDetail(5)">
+          <img src="assets/nike5.png" alt="" />
+        </div>
+        <div class="detail">
+          <div class="title">Nike Goals</div>
+          <div class="description">Shoot Anyone</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product" id="product6" onclick="getDetail(6)">
+          <img src="assets/nike6.png" alt="" />
+        </div>
+        <div class="detail">
+          <div class="title">Nike Fredom</div>
+          <div class="description">Free to run</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script type="module"
-      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script src="tweak.js"></script>
-  </body>
+  <div class="top-item">
+    <div class="top-item-wrapper">
+      <div class="top-item-row">
+        <img src="assets/nike5.png" alt="">
+        <div class="top-item-detail">
+          <h3>Nike Sport One</h3>
+          <p>Best Shoes Ever that was used by Cristiano Ronaldo and Lionel
+            Messi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="tweak.js"></script>
+</body>
+
 </html>
