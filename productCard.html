@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="productCard.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Winarto Shoes</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- ---------------- NAVBAR START ------------------>
+        <nav class="product-file">
+            <div class="logo" onclick="onReload()">
+                <h3>Winarto Shoes</h3>
+            </div>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="productCard.html">product</a></li>
+                <li><a href="#">galery</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+            <div class="toggle-menu" onclick="toggleMenu(1)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!------------------ NAVBAR END ---------------- -->
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="wrapper" id="wrapper">
+            <div class="card">
+                <div class="product" id="product1" onclick="getDetail(1)">
+                    <img src="assets/nike1.png" alt="" />
+                </div>
+                <div class="detail">
+                    <div class="title">Nike Sport One</div>
+                    <div class="description">Best Shoes Ever</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product" id="product2" onclick="getDetail(2)">
+                    <img src="assets/nike2.png" alt="" />
+                </div>
+                <div class="detail">
+                    <div class="title">Nike Vulgar Two</div>
+                    <div class="description">Comfort is in you</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product" id="product3" onclick="getDetail(3)">
+                    <img src="assets/nike3.png" alt="" />
+                </div>
+                <div class="detail">
+                    <div class="title">Nike GoodToGo</div>
+                    <div class="description">Running Faster</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product" id="product4" onclick="getDetail(4)">
+                    <img src="assets/nike4.png" alt="" />
+                </div>
+                <div class="detail">
+                    <div class="title">Nike Suede Sport</div>
+                    <div class="description">Better then anything</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product" id="product5" onclick="getDetail(5)">
+                    <img src="assets/nike5.png" alt="" />
+                </div>
+                <div class="detail">
+                    <div class="title">Nike Goals</div>
+                    <div class="description">Shoot Anyone</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="product" id="product6" onclick="getDetail(6)">
+                    <img src="assets/nike6.png" alt="" />
+                </div>
+                <div class="detail">
+                    <div class="title">Nike Fredom</div>
+                    <div class="description">Free to run</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="tweak.js"></script>
+</body>
+
+</html>
