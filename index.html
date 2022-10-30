@@ -1,280 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOXICONS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Winarto Shoes</title>
+  </head>
 
-  <!-- BOXICONS -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="style.css">
-  <title>Winarto Shoes</title>
-</head>
+  <body>
+    <div class="container">
+      <!-- ---------------- NAVBAR START ------------------>
+      <nav>
+        <div class="logo" onclick="onReload()">
+          <h3>Winarto Shoes</h3>
+        </div>
+        <ul>
+          <li><a href="#" onclick="onReload()">home</a></li>
+          <li><a href="#wrapper">product</a></li>
+          <li><a href="#">galery</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+        <div class="toggle-menu" onclick="toggleMenu(1)">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+      <!------------------ NAVBAR END ---------------- -->
 
-<body>
-  <div class="container">
-    <!-- ---------------- NAVBAR START ------------------>
-    <nav>
-      <div class="logo" onclick="onReload()">
-        <h3>Winarto Shoes</h3>
-      </div>
-      <ul>
-        <li><a href="#" onclick="onReload()">home</a></li>
-        <li><a href="productCard.html">product</a></li>
-        <li><a href="#">galery</a></li>
-        <li><a href="#">about</a></li>
-      </ul>
-      <div class="toggle-menu" onclick="toggleMenu(1)">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-    <!------------------ NAVBAR END ---------------- -->
-
-    <!------------------ SLIDER ------------------>
-    <div class="slide-container">
-      <div class="img-slider">
-        <div class="slide active">
-          <img src="assets/nike5.png" alt="">
-          <!-- <div class="info">
+      <!------------------ SLIDER ------------------>
+      <div class="slide-container">
+        <div class="img-slider">
+          <div class="slide active">
+            <img src="assets/nike5.png" alt="" />
+            <!-- <div class="info">
             <h2>slide1</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores velit corporis! Facere numquam
               tenetur deserunt temporibus ipsa consequuntur tempore magnam dolores asperiores, ab error. Tempore dolorum
               excepturi rerum maiores.</p>
           </div> -->
-        </div>
-        <div class="slide">
-          <img src="assets/nike2.png" alt="">
-          <!-- <div class="info">
+          </div>
+          <div class="slide">
+            <img src="assets/nike2.png" alt="" />
+            <!-- <div class="info">
             <h2>slide2</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores velit corporis! Facere numquam
               tenetur deserunt temporibus ipsa consequuntur tempore magnam dolores asperiores, ab error. Tempore dolorum
               excepturi rerum maiores.</p>
           </div> -->
-        </div>
-        <div class="slide">
-          <img src="assets/nike3.png" alt="">
-          <!-- <div class="info">
+          </div>
+          <div class="slide">
+            <img src="assets/nike3.png" alt="" />
+            <!-- <div class="info">
             <h2>slide3</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores velit corporis! Facere numquam
               tenetur deserunt temporibus ipsa consequuntur tempore magnam dolores asperiores, ab error. Tempore dolorum
               excepturi rerum maiores.</p>
           </div> -->
-        </div>
-        <div class="slide">
-          <img src="assets/nike4.png" alt="">
-          <!-- <div class="info">
+          </div>
+          <div class="slide">
+            <img src="assets/nike4.png" alt="" />
+            <!-- <div class="info">
             <h2>slide4</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci maiores velit corporis! Facere numquam
               tenetur deserunt temporibus ipsa consequuntur tempore magnam dolores asperiores, ab error. Tempore dolorum
               excepturi rerum maiores.</p>
           </div> -->
-        </div>
-        <div class="navigation">
-          <!-- <i class='bx bxs-chevron-right `right-button'></i> -->
-          <div class="btn active"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-        </div>
-      </div>
-    </div>
-    <!------------------ 3D ------------------>
-    <div class="cta" id="cta">
-      <model-viewer src="assets/scene.gltf" camera-controls camera-orbit="45deg 50deg" disable-zoom auto-rotate
-        shadow-intensity="1"></model-viewer>
-    </div>
-    <!------------------ 3D end------------------>
-
-    <!------------------ DETAIL PRODUCT ------------------>
-    <div class="newBox" id="newBox">
-      <div class="productBox" id="productBox1">
-        <div class="img-product">
-          <i class='bx bx-left-arrow-alt back-page' onclick="onBack(1)"></i>
-          <i class='bx bx-dots-vertical-rounded dots'></i>
-          <i class='bx bx-cart keranjang'></i>
-          <img src="assets/nike1.png" alt="" />
-        </div>
-        <div class="titleBox">TESTING BOX 1</div>
-        <div class="descriptionBox">DESKRIPSI BOX 1</div>
-      </div>
-      <div class="productBox" id="productBox2">
-        <div class="img-product">
-          <i class='bx bx-left-arrow-alt back-page' onclick="onBack(1)"></i>
-          <i class='bx bx-dots-vertical-rounded dots'></i>
-          <i class='bx bx-cart keranjang'></i>
-          <img src="assets/nike2.png" alt="" />
-        </div>
-        <div class="titleBox">TESTING BOX 2</div>
-        <div class="descriptionBox">DESKRIPSI BOX 2</div>
-      </div>
-      <div class="productBox" id="productBox3">
-        <div class="img-product">
-          <i class='bx bx-left-arrow-alt back-page' onclick="onBack(1)"></i>
-          <i class='bx bx-dots-vertical-rounded dots'></i>
-          <i class='bx bx-cart keranjang'></i>
-          <img src="assets/nike3.png" alt="" />
-        </div>
-        <div class="titleBox">TESTING BOX 2</div>
-        <div class="descriptionBox">DESKRIPSI BOX 2</div>
-      </div>
-      <div class="productBox" id="productBox4">
-        <div class="img-product">
-          <i class='bx bx-left-arrow-alt back-page' onclick="onBack(1)"></i>
-          <i class='bx bx-dots-vertical-rounded dots'></i>
-          <i class='bx bx-cart keranjang'></i>
-          <img src="assets/nike4.png" alt="" />
-        </div>
-        <div class="titleBox">TESTING BOX 2</div>
-        <div class="descriptionBox">DESKRIPSI BOX 2</div>
-      </div>
-      <div class="productBox" id="productBox5">
-        <div class="img-product">
-          <i class='bx bx-left-arrow-alt back-page' onclick="onBack(1)"></i>
-          <i class='bx bx-dots-vertical-rounded dots'></i>
-          <i class='bx bx-cart keranjang'></i>
-          <img src="assets/nike5.png" alt="" />
-        </div>
-        <div class="titleBox">TESTING BOX 2</div>
-        <div class="descriptionBox">DESKRIPSI BOX 2</div>
-      </div>
-      <div class="productBox" id="productBox6">
-        <div class="img-product">
-          <i class='bx bx-left-arrow-alt back-page' onclick="onBack(1)"></i>
-          <i class='bx bx-dots-vertical-rounded dots'></i>
-          <i class='bx bx-cart keranjang'></i>
-          <img src="assets/nike6.png" alt="" />
-        </div>
-        <div class="titleBox">TESTING BOX 2</div>
-        <div class="descriptionBox">DESKRIPSI BOX 2</div>
-      </div>
-    </div>
-
-    <!------------------ CARD START ------------------>
-    <div class="wrapper" id="wrapper">
-      <div class="card">
-        <div class="product" id="product1" onclick="getDetail(1)">
-          <img src="assets/nike1.png" alt="" />
-        </div>
-        <div class="detail">
-          <div class="title">Nike Sport One</div>
-          <div class="description">Best Shoes Ever</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="product" id="product2" onclick="getDetail(2)">
-          <img src="assets/nike2.png" alt="" />
-        </div>
-        <div class="detail">
-          <div class="title">Nike Vulgar Two</div>
-          <div class="description">Comfort is in you</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="product" id="product3" onclick="getDetail(3)">
-          <img src="assets/nike3.png" alt="" />
-        </div>
-        <div class="detail">
-          <div class="title">Nike GoodToGo</div>
-          <div class="description">Running Faster</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="product" id="product4" onclick="getDetail(4)">
-          <img src="assets/nike4.png" alt="" />
-        </div>
-        <div class="detail">
-          <div class="title">Nike Suede Sport</div>
-          <div class="description">Better then anything</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="product" id="product5" onclick="getDetail(5)">
-          <img src="assets/nike5.png" alt="" />
-        </div>
-        <div class="detail">
-          <div class="title">Nike Goals</div>
-          <div class="description">Shoot Anyone</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="product" id="product6" onclick="getDetail(6)">
-          <img src="assets/nike6.png" alt="" />
-        </div>
-        <div class="detail">
-          <div class="title">Nike Fredom</div>
-          <div class="description">Free to run</div>
-        </div>
-      </div>
-    </div>
-    <!------------------ CARD END ------------------>
-
-    <!------------------ TOP ITEMS ------------------>
-    <div class="top-item">
-      <div class="top-item-wrapper">
-        <div class="top-item-row">
-          <img src="assets/nike5.png" alt="">
-          <div class="top-item-detail">
-            <h3>Nike Sport One</h3>
-            <p>Best Shoes Ever that was used by Cristiano Ronaldo and Lionel
-              Messi</p>
+          </div>
+          <div class="navigation">
+            <!-- <i class='bx bxs-chevron-right `right-button'></i> -->
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      <!------------------ 3D ------------------>
+      <div class="cta" id="cta">
+        <model-viewer src="assets/scene.gltf" camera-controls camera-orbit="45deg 50deg" disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+      </div>
+      <!------------------ 3D end------------------>
 
-  <!--------------FOOTER START ----------------->
-  <footer>
-    <div class="footer-container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Company</h4>
-          <span></span>
-          <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Our Services</a></li>
-            <li><a href="">Privacy Policy</a></li>
-          </ul>
+      <!------------------ DETAIL PRODUCT ------------------>
+      <div class="newBox" id="newBox">
+        <div class="productBox" id="productBox1">
+          <div class="img-product">
+            <i class="bx bx-left-arrow-alt back-page" onclick="onBack(1)"></i>
+            <i class="bx bx-dots-vertical-rounded dots"></i>
+            <i class="bx bx-cart keranjang"></i>
+            <img src="assets/nike1.png" alt="" />
+          </div>
+          <div class="titleBox">TESTING BOX 1</div>
+          <div class="descriptionBox">DESKRIPSI BOX 1</div>
         </div>
-        <div class="footer-col">
-          <h4>Our Services</h4>
-          <span></span>
-          <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Our Services</a></li>
-            <li><a href="">Privacy Policy</a></li>
-          </ul>
+        <div class="productBox" id="productBox2">
+          <div class="img-product">
+            <i class="bx bx-left-arrow-alt back-page" onclick="onBack(1)"></i>
+            <i class="bx bx-dots-vertical-rounded dots"></i>
+            <i class="bx bx-cart keranjang"></i>
+            <img src="assets/nike2.png" alt="" />
+          </div>
+          <div class="titleBox">TESTING BOX 2</div>
+          <div class="descriptionBox">DESKRIPSI BOX 2</div>
         </div>
-        <div class="footer-col">
-          <h4>Privacy Policy</h4>
-          <span></span>
-          <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Our Services</a></li>
-            <li><a href="">Privacy Policy</a></li>
-          </ul>
+        <div class="productBox" id="productBox3">
+          <div class="img-product">
+            <i class="bx bx-left-arrow-alt back-page" onclick="onBack(1)"></i>
+            <i class="bx bx-dots-vertical-rounded dots"></i>
+            <i class="bx bx-cart keranjang"></i>
+            <img src="assets/nike3.png" alt="" />
+          </div>
+          <div class="titleBox">TESTING BOX 2</div>
+          <div class="descriptionBox">DESKRIPSI BOX 2</div>
         </div>
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <span></span>
-          <div class="social-link">
-            <a href=""><i class='bx bxl-facebook'></i></a>
-            <a href=""><i class='bx bxl-instagram'></i></a>
+        <div class="productBox" id="productBox4">
+          <div class="img-product">
+            <i class="bx bx-left-arrow-alt back-page" onclick="onBack(1)"></i>
+            <i class="bx bx-dots-vertical-rounded dots"></i>
+            <i class="bx bx-cart keranjang"></i>
+            <img src="assets/nike4.png" alt="" />
+          </div>
+          <div class="titleBox">TESTING BOX 2</div>
+          <div class="descriptionBox">DESKRIPSI BOX 2</div>
+        </div>
+        <div class="productBox" id="productBox5">
+          <div class="img-product">
+            <i class="bx bx-left-arrow-alt back-page" onclick="onBack(1)"></i>
+            <i class="bx bx-dots-vertical-rounded dots"></i>
+            <i class="bx bx-cart keranjang"></i>
+            <img src="assets/nike5.png" alt="" />
+          </div>
+          <div class="titleBox">TESTING BOX 2</div>
+          <div class="descriptionBox">DESKRIPSI BOX 2</div>
+        </div>
+        <div class="productBox" id="productBox6">
+          <div class="img-product">
+            <i class="bx bx-left-arrow-alt back-page" onclick="onBack(1)"></i>
+            <i class="bx bx-dots-vertical-rounded dots"></i>
+            <i class="bx bx-cart keranjang"></i>
+            <img src="assets/nike6.png" alt="" />
+          </div>
+          <div class="titleBox">TESTING BOX 2</div>
+          <div class="descriptionBox">DESKRIPSI BOX 2</div>
+        </div>
+      </div>
+
+      <!------------------ CARD START ------------------>
+      <div class="wrapper" id="wrapper">
+        <div class="card">
+          <div class="product" id="product1" onclick="getDetail(1)">
+            <img src="assets/nike1.png" alt="" />
+          </div>
+          <div class="detail">
+            <div class="title">Nike Sport One</div>
+            <div class="description">Best Shoes Ever</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="product" id="product2" onclick="getDetail(2)">
+            <img src="assets/nike2.png" alt="" />
+          </div>
+          <div class="detail">
+            <div class="title">Nike Vulgar Two</div>
+            <div class="description">Comfort is in you</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="product" id="product3" onclick="getDetail(3)">
+            <img src="assets/nike3.png" alt="" />
+          </div>
+          <div class="detail">
+            <div class="title">Nike GoodToGo</div>
+            <div class="description">Running Faster</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="product" id="product4" onclick="getDetail(4)">
+            <img src="assets/nike4.png" alt="" />
+          </div>
+          <div class="detail">
+            <div class="title">Nike Suede Sport</div>
+            <div class="description">Better then anything</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="product" id="product5" onclick="getDetail(5)">
+            <img src="assets/nike5.png" alt="" />
+          </div>
+          <div class="detail">
+            <div class="title">Nike Goals</div>
+            <div class="description">Shoot Anyone</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="product" id="product6" onclick="getDetail(6)">
+            <img src="assets/nike6.png" alt="" />
+          </div>
+          <div class="detail">
+            <div class="title">Nike Fredom</div>
+            <div class="description">Free to run</div>
+          </div>
+        </div>
+      </div>
+      <!------------------ CARD END ------------------>
+
+      <!------------------ TOP ITEMS ------------------>
+      <div class="top-item">
+        <div class="top-item-wrapper">
+          <div class="top-item-row">
+            <img src="assets/nike5.png" alt="" />
+            <div class="top-item-detail">
+              <h3>Nike Sport One</h3>
+              <p>Best Shoes Ever that was used by Cristiano Ronaldo and Lionel Messi</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="copyright">
-      <i class='bx bx-copyright'>2022. Hak cipta dilindungi</i>
-    </div>
-  </footer>
-  <!----------------- footer end --------------->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <script src="tweak.js"></script>
-</body>
+    <!--------------FOOTER START ----------------->
+    <footer>
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <span></span>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Our Services</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Services</h4>
+            <span></span>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Our Services</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Privacy Policy</h4>
+            <span></span>
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Our Services</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <span></span>
+            <div class="social-link">
+              <a href=""><i class="bx bxl-facebook"></i></a>
+              <a href=""><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="copyright">
+        <i class="bx bx-copyright">2022. Hak cipta dilindungi</i>
+      </div>
+    </footer>
+    <!----------------- footer end --------------->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="tweak.js"></script>
+  </body>
 </html>

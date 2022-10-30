@@ -10,11 +10,13 @@
   --color-info-light: #dce1eb;
   --color-dark: #363949;
   --color-light: #rgba(132, 139, 200, 0.18);
+  --color-dark-primary: #36332d;
   --color-primary-vaariant: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
+  --color-white-primary: #dbd7cc;
 
-  --box-shadow: 0 2rem 3rem var(var(--color-light))
+  --box-shadow: 0 2rem 3rem var(var(--color-light));
 }
 
 *,
@@ -57,12 +59,11 @@ nav ul {
   justify-content: space-between;
 }
 
-
 nav ul li a {
   color: var(--color-white);
   display: flex;
   text-decoration: none;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 nav ul li a:hover {
@@ -79,34 +80,34 @@ nav ul li a:hover {
   align-items: center;
   justify-content: space-between;
   margin-left: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  nav ul {
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    width: 60%;
+    justify-content: space-evenly;
+    background-color: var(--color-primary);
+    right: -100%;
+    transition: all 0.5s ease-in-out;
   }
 
-  @media screen and (max-width: 576px) {
-    nav ul {
-      z-index: 999;
-      position: absolute;
-      right: 0;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      top: 0;
-      width: 60%;
-      justify-content: space-evenly;
-      background-color: var(--color-primary);
-      right: -100%;
-      transition: all .5s ease-in-out;
-    }
-  
-    nav ul.slide{
-      right: 0;
-    }
-  
-    .toggle-menu {
-      display: flex;
-    }
+  nav ul.slide {
+    right: 0;
   }
 
-.toggle-menu span{
+  .toggle-menu {
+    display: flex;
+  }
+}
+
+.toggle-menu span {
   display: block;
   background-color: var(--color-white);
   width: 26px;
@@ -127,11 +128,9 @@ nav ul li a:hover {
 }
 /* ---------------------------- NAVBAR END ---------------------------- */
 
-
-
 /* ---------------------------- CONTENT START ---------------------------- */
 /* silde start */
-.slide-container{
+.slide-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +138,7 @@ nav ul li a:hover {
   background-color: var(--color-info-light);
 }
 
-.img-slider{
+.img-slider {
   background-color: var(--color-background);
   position: relative;
   width: 1800px;
@@ -149,7 +148,7 @@ nav ul li a:hover {
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
 }
 
-.img-slider .slide{
+.img-slider .slide {
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -158,13 +157,13 @@ nav ul li a:hover {
   clip-path: circle(0% at 0 50%);
 }
 
-.img-slider .slide.active{
+.img-slider .slide.active {
   clip-path: circle(150% at 0 50%);
   transition: 2s;
   transition-property: clip-path;
 }
 
-.img-slider .slide img{
+.img-slider .slide img {
   z-index: 1;
   width: 550px;
   height: 550px;
@@ -172,13 +171,13 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-.img-slider .slide .info{
+.img-slider .slide .info {
   position: absolute;
   top: 0;
   padding: 15px 30px;
 }
 
-.img-slider .slide .info h2{
+.img-slider .slide .info h2 {
   color: var(--color-white);
   font-size: 45px;
   text-transform: uppercase;
@@ -186,16 +185,16 @@ nav ul li a:hover {
   letter-spacing: 2px;
 }
 
-.img-slider .slide .info p{
+.img-slider .slide .info p {
   color: var(--color-white);
   background-color: rgba(0, 0, 0, 0.1);
   font-size: 16px;
   width: 60%;
   padding: 10px;
-  border-radius:4px ;
+  border-radius: 4px;
 }
 
-.img-slider .navigation{
+.img-slider .navigation {
   z-index: 2;
   position: absolute;
   display: flex;
@@ -204,7 +203,7 @@ nav ul li a:hover {
   transform: translateX(-50%);
 }
 
-.img-slider .navigation .btn{
+.img-slider .navigation .btn {
   background-color: var(--color-info-dark);
   width: 12px;
   height: 12px;
@@ -213,22 +212,22 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-.img-slider .navigation .btn.active{
+.img-slider .navigation .btn.active {
   background-color: var(--color-dark);
-  box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 1290px) {
-  .slide-container{
+  .slide-container {
     height: 700px;
   }
 
-  .img-slider{
+  .img-slider {
     height: 560px;
     margin-bottom: 10px;
   }
-  
-  .img-slider .slide img{
+
+  .img-slider .slide img {
     margin-top: 0;
     height: 500px;
     width: 500px;
@@ -236,81 +235,80 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 820px) {
-  .slide-container{
+  .slide-container {
     height: 620px;
   }
 
-  .img-slider{
+  .img-slider {
     width: 800px;
     height: 500px;
     margin-top: 30px;
   }
 
-  .img-slider .slide img{
+  .img-slider .slide img {
     width: 400px;
     height: 400px;
     margin-top: 30px;
   }
 
-  .img-slider .slide .info{
+  .img-slider .slide .info {
     padding: 10px 25px;
   }
 
-  .img-slider .slide .info{
+  .img-slider .slide .info {
     padding: 10px 25px;
   }
 
-  .img-slider .slide .info h2{
+  .img-slider .slide .info h2 {
     font-size: 35px;
   }
 
-  .img-slider .slide .info p{
+  .img-slider .slide .info p {
     font-size: 15px;
     width: 70%;
   }
 
-  .img-slider .navigation{
+  .img-slider .navigation {
     bottom: 25px;
   }
 
-  .img-slider .navigation .btn{
+  .img-slider .navigation .btn {
     width: 10px;
     height: 10px;
     margin: 8px;
   }
 
-  .img-slider .navigation i{
+  .img-slider .navigation i {
     width: 200px;
     height: 200px;
   }
 
-  .cta{
+  .cta {
     margin-top: -100px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .slide-container{
+  .slide-container {
     height: 440px;
   }
-  .img-slider{
-   height: 350px;
-   margin-top: 60px;
-   border-radius:5px;
+  .img-slider {
+    height: 350px;
+    margin-top: 60px;
+    border-radius: 5px;
   }
-  .img-slider .slide img{
+  .img-slider .slide img {
     height: 300px;
     width: 300px;
   }
-  .img-slider .navigation{
+  .img-slider .navigation {
     bottom: 10px;
   }
-  .img-slider .navigation .btn{
+  .img-slider .navigation .btn {
     background-color: var(--color-info-dark);
   }
 }
 /* slide end */
-
 
 /* ------------ 3D START ------------- */
 .cta {
@@ -325,9 +323,6 @@ model-viewer {
 }
 /* ------------ 3D END ------------- */
 
-
-
-
 /* ----------- DETAIL PRODUCT START ------------ */
 .newBox {
   display: none;
@@ -337,8 +332,8 @@ model-viewer {
   display: none;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   align-items: center;
-  background-color: #111e88;
 }
 
 .productBox img {
@@ -370,8 +365,8 @@ model-viewer {
   color: var(--color-dark-variant);
 }
 
-@media screen and (max-width: 576px){
-  .img-product{
+@media screen and (max-width: 576px) {
+  .img-product {
     background-color: var(--color-info-light);
     position: relative;
     width: 100%;
@@ -386,14 +381,14 @@ model-viewer {
     top: 20px;
     right: 14%;
   }
-  .img-product .dots{
+  .img-product .dots {
     top: 20px;
     right: 2%;
   }
   .img-product img {
     width: 400px;
     margin-top: 30px;
-    height: 400px;  
+    height: 400px;
   }
 }
 
@@ -404,9 +399,6 @@ model-viewer {
   font-family: arial;
 }
 /* ----------- DETAIL PRODUCT END ------------ */
-
-
-
 
 /* ---------------------------- CARD START ---------------------------- */
 .wrapper {
@@ -437,7 +429,7 @@ model-viewer {
 
 .product:hover {
   transform: rotate3d(1, 1, 10, 360deg) scale(110%);
-  transition-delay: .10s;
+  transition-delay: 0.1s;
 }
 
 .product img {
@@ -473,7 +465,7 @@ model-viewer {
 /* ---------------------------- TOP ITEM ---------------------------- */
 .top-item {
   background-color: var(--color-success);
- margin-top: 100px;
+  margin-top: 100px;
 }
 
 .top-item-wrapper {
@@ -509,12 +501,12 @@ model-viewer {
   height: auto;
 }
 
-@media screen and (min-width: 1280px){
-  .top-item-wrapper{
+@media screen and (min-width: 1280px) {
+  .top-item-wrapper {
     height: 500px;
   }
 
-  .top-item-detail h3{
+  .top-item-detail h3 {
     letter-spacing: 5px;
     margin-top: 10px;
   }
@@ -525,16 +517,16 @@ model-viewer {
   }
 }
 
-@media screen and (max-width: 576px){
-  .top-item-detail{
+@media screen and (max-width: 576px) {
+  .top-item-detail {
     margin-top: -10px;
   }
-  .top-item-detail h3{
+  .top-item-detail h3 {
     letter-spacing: 1px;
     font-size: 30px;
     font-weight: 600;
   }
-  .top-item-detail p{
+  .top-item-detail p {
     font-size: 22px;
     margin-top: 5px;
   }
@@ -544,29 +536,28 @@ model-viewer {
   }
 }
 
-
 /* ---------------------------- FOOTER ---------------------------- */
-footer{
+footer {
   background-color: var(--color-white);
   padding: 50px 0;
 }
 
-.footer-container{
+.footer-container {
   max-width: 1170px;
   margin: auto;
 }
 
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.footer-col{
+.footer-col {
   width: 25%;
   padding: 0 15px;
 }
 
-.footer-col h4{
+.footer-col h4 {
   font-size: 18px;
   color: var(--color-dark);
   font-weight: 500;
@@ -574,7 +565,7 @@ footer{
   position: relative;
 }
 
-.footer-col span{
+.footer-col span {
   display: inline-block;
   width: 50px;
   height: 2px;
@@ -591,24 +582,24 @@ footer{
   margin-bottom: 10px;
 }
 
-.footer-col ul li a{
+.footer-col ul li a {
   text-decoration: none;
   font-size: 14px;
   color: var(--color-dark);
   display: block;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
+.footer-col ul li a:hover {
   padding-left: 10px;
   color: black;
 }
 
-.social-link{
+.social-link {
   margin-top: 30px;
 }
 
-.social-link a i{
+.social-link a i {
   width: 30px;
   font-size: 20px;
   height: 30px;
@@ -616,22 +607,22 @@ footer{
   color: var(--color-dark);
   line-height: 30px;
   border-radius: 15px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
-.social-link a i:hover{
+.social-link a i:hover {
   background-color: var(--color-dark);
   color: var(--color-white);
 }
 
 @media screen and (max-width: 1170px) {
-  .footer-col{
+  .footer-col {
     padding-left: 55px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .footer-col{
+  .footer-col {
     width: 50%;
     margin-bottom: 50px;
     padding-left: 30px;
@@ -639,12 +630,12 @@ footer{
 }
 
 @media screen and (max-width: 576px) {
-  .footer-col{
+  .footer-col {
     width: 100%;
     padding-left: 50px;
   }
 
-  .footer-container{
+  .footer-container {
     margin-bottom: -50px;
   }
 }
@@ -662,5 +653,4 @@ footer{
   border-top: solid 1px var(--color-info-light);
   line-height: 40px;
   font-family: Arial, Helvetica, sans-serif;
-
 }
